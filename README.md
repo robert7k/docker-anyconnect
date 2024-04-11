@@ -18,7 +18,7 @@ docker build . --tag anyconnect
 3. Run the docker image:
 
 ```
-docker run --rm -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v `pwd`:/root --name anyconnect --privileged anyconnect
+docker run --rm -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --name anyconnect --privileged anyconnect
 ```
 
 This will start AnyConnect and Firefox. As soon as you have connected to your VPN, you can use Firefox to browse.

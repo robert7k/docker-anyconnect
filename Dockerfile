@@ -10,4 +10,6 @@ RUN tar -xvzf anyconnect-linux64-4.10.07061-predeploy-k9.tar.gz
 
 RUN adduser --disabled-password docker
 
-ENTRYPOINT ["/root/docker-entrypoint.sh"]
+COPY docker-entrypoint.sh .
+
+ENTRYPOINT ["/bin/bash", "docker-entrypoint.sh"]
